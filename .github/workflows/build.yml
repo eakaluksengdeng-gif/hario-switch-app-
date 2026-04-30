@@ -8,12 +8,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.24.0'
-      - run: flutter pub get
-      - run: flutter build apk --release
+
+      - name: Create Flutter project
+        run: flutter create --org com.hario --project-name hario_switch tmp_app
+
+      - name: Replace main.dart with our code
+        run: cp lib/main.dart tmp_app/lib/main.dart
+
+      - name: Replace pubspec.yaml
+        run: cp pubspec.yaml tmp_app/pubspec.yaml
+
+      - name: Build APK
+        run: |
+          cd tmp_app
+          flutter pub get
+          flutter build apk --release
+
       - uses: actions/upload-artifact@v4
         with:
           name: hario-switch-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: tmp_app/build/app/outputs/flutter-apk/app-release.apk
