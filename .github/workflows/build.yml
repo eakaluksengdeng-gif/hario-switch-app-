@@ -1,4 +1,5 @@
 name: Build APK
+
 on:
   push:
     branches: [ main ]
@@ -14,7 +15,7 @@ jobs:
           flutter-version: '3.24.0'
 
       - name: Create Flutter project
-        run: flutter create --org com.hario --project-name hario_switch tmp_app
+        run: flutter create --org com.hario --project-name teki tmp_app
 
       - name: Replace main.dart with our code
         run: cp lib/main.dart tmp_app/lib/main.dart
@@ -22,13 +23,23 @@ jobs:
       - name: Replace pubspec.yaml
         run: cp pubspec.yaml tmp_app/pubspec.yaml
 
+      - name: Copy app icon
+        run: |
+          mkdir -p tmp_app/assets/icon
+          cp app_icon.png tmp_app/assets/icon/app_icon.png
+
+      - name: Set app name to Teki
+        run: |
+          sed -i 's/android:label="teki"/android:label="Teki"/g' tmp_app/android/app/src/main/AndroidManifest.xml
+
       - name: Build APK
         run: |
           cd tmp_app
           flutter pub get
+          dart run flutter_launcher_icons
           flutter build apk --release
 
       - uses: actions/upload-artifact@v4
         with:
-          name: hario-switch-apk
+          name: teki-apk
           path: tmp_app/build/app/outputs/flutter-apk/app-release.apk
