@@ -108,6 +108,9 @@ class Recipe {
 // สูตร Hario Switch (เหมือนเดิม)
 // ─────────────────────────────────────────────
 const List<Recipe> kRecipes = [
+  // ─────────────────────────────────────────────
+  // สูตร Hario Switch
+  // ─────────────────────────────────────────────
   Recipe(
     name: 'Iced Flash Brew', tag: 'Hybrid', dripper: DripperType.harioSwitch,
     desc: 'ดริปเย็นสไตล์สดใส — ใส่น้ำแข็ง 120g ในเหยือกรอ',
@@ -116,6 +119,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 45,  percent: 0.35, action: 'เปิดสวิตช์ · เทรอบ 2'),
       BrewStep(time: 90,  percent: 0.40, action: 'ปิดสวิตช์ · แช่ 30 วิ'),
       BrewStep(time: 120, percent: 0.00, action: 'เปิดสวิตช์ · ลงน้ำแข็ง'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -124,6 +128,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,   percent: 1.00, action: 'ปิดสวิตช์ · เทน้ำร้อนรวด & คน'),
       BrewStep(time: 180, percent: 0.00, action: 'เปิดสวิตช์ · ลงน้ำแข็ง'),
+      BrewStep(time: 270, percent: 0.00, action: '✓ จบ — 4:30'),
     ],
   ),
   Recipe(
@@ -133,6 +138,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,  percent: 0.20, action: 'เปิดสวิตช์ · Bloom'),
       BrewStep(time: 45, percent: 0.40, action: 'เทรอบ 2 (วนก้นหอย)'),
       BrewStep(time: 90, percent: 0.40, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -141,6 +147,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,   percent: 1.00, action: 'ปิดสวิตช์ · เทรวด & คนเบาๆ'),
       BrewStep(time: 150, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำลง'),
+      BrewStep(time: 240, percent: 0.00, action: '✓ จบ — 4:00'),
     ],
   ),
   Recipe(
@@ -151,6 +158,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 45,  percent: 0.20, action: 'เทรอบ 2'),
       BrewStep(time: 75,  percent: 0.60, action: 'ปิดสวิตช์ · แช่'),
       BrewStep(time: 165, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 240, percent: 0.00, action: '✓ จบ — 4:00'),
     ],
   ),
   Recipe(
@@ -160,6 +168,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,   percent: 1.00, action: 'ปิดสวิตช์ · ลงน้ำก่อน ตามด้วยกาแฟ'),
       BrewStep(time: 120, percent: 0.00, action: 'คนเบาๆ ให้ทั่ว'),
       BrewStep(time: 180, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 270, percent: 0.00, action: '✓ จบ — 4:30'),
     ],
   ),
   Recipe(
@@ -170,6 +179,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 30,  percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยทิ้ง'),
       BrewStep(time: 45,  percent: 0.75, action: 'ปิดสวิตช์ · เทที่เหลือแช่'),
       BrewStep(time: 120, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -179,6 +189,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,  percent: 0.25, action: 'ปิดสวิตช์ · Bloom แช่'),
       BrewStep(time: 45, percent: 0.35, action: 'เปิดสวิตช์ · เทรอบ 2'),
       BrewStep(time: 90, percent: 0.40, action: 'เทรอบสุดท้าย (เปิดตลอด)'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -189,6 +200,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 60,  percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
       BrewStep(time: 75,  percent: 0.50, action: 'ปิดสวิตช์ · แช่ครึ่งหลัง'),
       BrewStep(time: 135, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -197,6 +209,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,   percent: 1.00, action: 'เปิดสวิตช์ · เทช้าๆ จนครบ'),
       BrewStep(time: 120, percent: 0.00, action: 'รอจนน้ำไหลหมด'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -207,6 +220,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 45,  percent: 0.25, action: 'เทรอบ 2'),
       BrewStep(time: 75,  percent: 0.50, action: 'ปิดสวิตช์ · แช่'),
       BrewStep(time: 135, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -218,6 +232,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 60,  percent: 0.33, action: 'ปิดสวิตช์ · รอบสอง'),
       BrewStep(time: 105, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
       BrewStep(time: 120, percent: 0.34, action: 'ปิดสวิตช์ · รอบสาม'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -227,6 +242,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,   percent: 0.20, action: 'เปิดสวิตช์ · Bloom'),
       BrewStep(time: 45,  percent: 0.80, action: 'ปิดสวิตช์ · เทรวด'),
       BrewStep(time: 120, percent: 0.00, action: 'เปิดสวิตช์ · ปล่อยน้ำ'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -235,6 +251,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,  percent: 0.20, action: 'เปิดสวิตช์ · Bloom'),
       BrewStep(time: 45, percent: 0.80, action: 'เปิดสวิตช์ · เทกลางช้าๆ'),
+      BrewStep(time: 150, percent: 0.00, action: '✓ จบ — 2:30'),
     ],
   ),
 
@@ -245,9 +262,10 @@ const List<Recipe> kRecipes = [
     name: 'Origami Classic', tag: 'Bright', dripper: DripperType.origami,
     desc: 'V60 style ผ่าน Origami รสสะอาด สดใส',
     steps: [
-      BrewStep(time: 0,  percent: 0.20, action: 'Bloom · วนเบาๆ'),
-      BrewStep(time: 45, percent: 0.40, action: 'เทรอบ 2 วนก้นหอย'),
-      BrewStep(time: 90, percent: 0.40, action: 'เทรอบสุดท้ายช้าๆ'),
+      BrewStep(time: 0,   percent: 0.20, action: 'Bloom · วนเบาๆ'),
+      BrewStep(time: 45,  percent: 0.40, action: 'เทรอบ 2 วนก้นหอย'),
+      BrewStep(time: 90,  percent: 0.40, action: 'เทรอบสุดท้ายช้าๆ'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -258,6 +276,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 45,  percent: 0.28, action: 'เทรอบ 2'),
       BrewStep(time: 85,  percent: 0.28, action: 'เทรอบ 3'),
       BrewStep(time: 125, percent: 0.29, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 210, percent: 0.00, action: '✓ จบ — 3:30'),
     ],
   ),
   Recipe(
@@ -267,6 +286,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,   percent: 0.20, action: 'Bloom · แช่ไว้'),
       BrewStep(time: 50,  percent: 0.40, action: 'เทรอบ 2 วนช้าๆ'),
       BrewStep(time: 100, percent: 0.40, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 195, percent: 0.00, action: '✓ จบ — 3:15'),
     ],
   ),
   Recipe(
@@ -276,6 +296,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,  percent: 0.20, action: 'Bloom'),
       BrewStep(time: 45, percent: 0.35, action: 'เทรอบ 2'),
       BrewStep(time: 80, percent: 0.45, action: 'เทรอบสุดท้ายลงน้ำแข็ง'),
+      BrewStep(time: 165, percent: 0.00, action: '✓ จบ — 2:45'),
     ],
   ),
   Recipe(
@@ -284,6 +305,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,  percent: 0.25, action: 'Bloom'),
       BrewStep(time: 35, percent: 0.75, action: 'เทรวดเร็วจนครบ'),
+      BrewStep(time: 120, percent: 0.00, action: '✓ จบ — 2:00'),
     ],
   ),
 
@@ -297,6 +319,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,  percent: 0.20, action: 'Bloom · รอ 30 วิ'),
       BrewStep(time: 30, percent: 0.40, action: 'เทรอบ 2 วนเป็นวงกลม'),
       BrewStep(time: 70, percent: 0.40, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 165, percent: 0.00, action: '✓ จบ — 2:45'),
     ],
   ),
   Recipe(
@@ -307,6 +330,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 30,  percent: 0.28, action: 'เทรอบ 2'),
       BrewStep(time: 65,  percent: 0.28, action: 'เทรอบ 3'),
       BrewStep(time: 100, percent: 0.29, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 195, percent: 0.00, action: '✓ จบ — 3:15'),
     ],
   ),
   Recipe(
@@ -315,6 +339,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,  percent: 0.20, action: 'Bloom ตรงกลาง'),
       BrewStep(time: 35, percent: 0.80, action: 'เทกลางช้าๆ ต่อเนื่อง'),
+      BrewStep(time: 150, percent: 0.00, action: '✓ จบ — 2:30'),
     ],
   ),
   Recipe(
@@ -324,6 +349,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,   percent: 0.20, action: 'Bloom · รอ 40 วิ'),
       BrewStep(time: 40,  percent: 0.40, action: 'เทรอบ 2 ช้าๆ'),
       BrewStep(time: 90,  percent: 0.40, action: 'เทรอบสุดท้าย'),
+      BrewStep(time: 180, percent: 0.00, action: '✓ จบ — 3:00'),
     ],
   ),
   Recipe(
@@ -333,6 +359,7 @@ const List<Recipe> kRecipes = [
       BrewStep(time: 0,  percent: 0.20, action: 'Bloom'),
       BrewStep(time: 40, percent: 0.35, action: 'เทรอบ 2'),
       BrewStep(time: 80, percent: 0.45, action: 'เทรอบสุดท้ายลงน้ำแข็ง'),
+      BrewStep(time: 165, percent: 0.00, action: '✓ จบ — 2:45'),
     ],
   ),
   Recipe(
@@ -341,6 +368,7 @@ const List<Recipe> kRecipes = [
     steps: [
       BrewStep(time: 0,  percent: 0.25, action: 'Bloom · รอ 20 วิ'),
       BrewStep(time: 20, percent: 0.75, action: 'เทรวดจนครบ'),
+      BrewStep(time: 120, percent: 0.00, action: '✓ จบ — 2:00'),
     ],
   ),
 ];
